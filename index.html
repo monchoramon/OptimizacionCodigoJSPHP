@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Empleados</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css">
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/DataTables/datatables.js"></script>
+	<script src="assets/js/nucleo/nucleo.js"></script>
+
+</head>
+<body>
+
+	<div class="container">
+
+		<div style="padding: 20px;">
+			<button type="button" id="btn_nuevo_registro" class="btn btn-primary">Registrar</button>
+		</div>
+
+		<table id="empleados" class="display" style="width:100%">
+	    <thead>
+	        <tr>
+	            <th>ID</th>
+	            <th>Nombre</th>
+	            <th>Apellido paterno</th>
+	            <th>Apellido materno</th>
+	            <th>Puesto</th>
+	            <th>Fecha de nacimiento</th>
+	            <th>Correo</th>
+	            <th>Salario</th>
+	            <th>Contratista</th>
+	            <th>*****</th>
+	            <th>*****</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    </tbody>
+	</table>
+
+	<!-- Modal -->
+	<div class="modal fade" id="datos_usuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog p70" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Registro empleado</h5>
+	        <button type="button" id="cancelar" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+
+      		<form id="registro" class="flex_h">
+
+			  <div class="form-group">
+			    <label>Nombre</label>
+			    <input type="text" class="form-control" name="nombre">
+			  </div>
+
+			  <div class="form-group">
+			    <label>Apellido paterno</label>
+			    <input type="text" class="form-control" name="apellido_paterno">
+			  </div>
+
+			  <div class="form-group">
+			    <label>Apellido materno</label>
+			    <input type="text" class="form-control" name="apellido_materno">
+			  </div>
+
+			  <div class="form-group">
+			    <label>Puesto</label>
+			    <input type="text" class="form-control" name="puesto">
+			  </div>
+
+			  <div class="form-group">
+			    <label>Fecha de nacimiento</label>
+			    <input type="date" class="form-control" name="fecha_nacimiento">
+			  </div>
+
+			  <div class="form-group">
+			    <label>Correo</label>
+			    <input type="email" class="form-control" name="correo">
+			  </div>
+
+			  <div class="form-group">
+			    <label>Salario</label>
+			    <input type="text" class="form-control" name="salario">
+			  </div>
+
+			  <div class="form-group">
+			    <label>Contratista</label>
+			   	<select name="contratista" class="form-control">
+			   		<option value="1">Si</option>
+			   		<option value="0">No</option>
+			   	</select>
+			  </div>
+
+			   <div class="form-group">
+			   		<div>Deportes que realiza:</div>
+			   	 	<div>
+			   		    <input id="radio_1" class="form-check-input" type="radio" name="deporte" value="Opción 1">
+			   		    <label class="form-check-label">Basketball</label>
+			   		</div>
+			   		<div>
+			   		    <input id="radio_2" class="form-check-input" type="radio" name="deporte" value="Opción 2">
+			   		    <label class="form-check-label">Futbol</label>
+			   		</div>
+			   		<div>
+			   		    <input id="radio_3" class="form-check-input" type="radio" name="deporte" value="Opción 3">
+			   		    <label class="form-check-label">Voleibol</label>
+			   		</div>
+			   </div>
+
+			</form>
+
+
+			<div class="otros_datos">
+				<div>
+					<input type="text" name="otro_a" value="123">
+					<label>Otro dato 1</label>
+				</div>
+				<div>
+					<input type="text" name="otro_b" value="321">
+					<label>Otro dato 2</label>
+				</div>
+			</div>
+
+	      </div>
+	      <div class="modal-footer btn_f">
+	         <button type="button" id="btn_registrar" class="btn btn-primary">Aceptar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+	</div>
+</body>
+ 
+
+  <link rel="stylesheet" type="text/css" href="assets/css/nucleo/nucleo.css">
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/datatablemain.js"></script>
+
+</html>

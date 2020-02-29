@@ -1,0 +1,25 @@
+
+.p70{
+	min-width: 50%!important;
+}
+
+.flex_h{
+	display: flex;
+    flex-wrap: wrap;
+}
+
+/*.flex_h > input{
+	margin: 0px 3px;
+}*/
+
+.flex_h > div{
+	padding: 10px;
+}
+
+.btn_f{
+	display: initial;
+}
+
+.flex_h > div label{
+	font-weight: 700!important;
+}
